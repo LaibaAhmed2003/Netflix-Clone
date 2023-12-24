@@ -1,9 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
-
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
 /* Background Image */
 .BgImg {
   height: 100vh;
@@ -14,8 +23,37 @@
   width: 100vw;
 }
 
-/* Signup */
+/* Header */
+.header-container {
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-container .logo img {
+  height: 5rem;
+}
+.header-container button {
+  padding: 0.5rem 1rem;
+  background-color: #e50914;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+.loginbtn {
+  padding: 0.5rem 1rem;
+  background-color: #e50914;
+  border: none;
+  cursor: pointer;
+  color: white;
+  width: 70px;
+  margin-top: 20px;
+}
 
+/* Signup */
+.signup-main-div {
+  position: relative;
+}
 .Signup-Container {
   position: absolute;
   top: 0;
@@ -25,4 +63,55 @@
   width: 100vw;
   display: grid;
   grid-template-rows: 15vh 85vh;
+}
+.Signup-Content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Signup-Content h4,
+h6 {
+  padding: 0 30rem;
+  line-height: 2;
+}
+.Signup-Content h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 0 30rem;
+}
+.Signup-Content h4 {
+  font-size: 1.5rem;
+}
+.Signup-Content h6 {
+  font-size: 1rem;
+  margin-bottom: 9px;
+}
+/* Signup form */
+
+.form {
+  display: grid;
+  width: 60%;
+  text-align: center;
+}
+.form input {
+  color: black;
+  /* border: none; */
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  border: 1px solid black;
+}
+.form input:focus {
+  outline: none;
+}
+.form .btn {
+  padding: 0.5rem 1rem;
+  background-color: #e50914;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 0.2rem;
+  font-weight: bolder;
+  font-size: 1.05rem;
 }
