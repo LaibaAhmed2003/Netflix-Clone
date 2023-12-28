@@ -4,6 +4,13 @@ import { useState } from "react";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState();
+  const [formValues, setFormValues] = useState({
+    email: "",
+    password: "",
+  });
+  const handleSignIn = async () => {
+    console.log(formValues);
+  };
   return (
     <div className="signup-main-div" showPassword={showPassword}>
       <BgImg />
@@ -21,15 +28,40 @@ const Signup = () => {
               gridTemplateColumns: showPassword ? "1fr 1fr" : "2fr 1fr",
             }}
           >
-            <input type="email" placeholder="Email Address" name="email" />
-            {showPassword && <input type="password" placeholder="Password" />}
+            <input
+              type="email"
+              placeholder="Email Address"
+              name="email"
+              value={formValues.email}
+              onChange={(e) =>
+                setFormValues({
+                  ...formValues,
+                  [e.target.name]: e.target.value,
+                })
+              }
+            />
+            {showPassword && (
+              <input
+                type="password"
+                placeholder="Password"
+                value={formValues.password}
+                onChange={(e) =>
+                  setFormValues({
+                    ...formValues,
+                    [e.target.name]: e.target.value,
+                  })
+                }
+              />
+            )}
 
             {!showPassword && (
               <button className="btn" onClick={() => setShowPassword(true)}>
                 Get Started
               </button>
             )}
-            <button className="loginbtn">Log In</button>
+            <button className="loginbtn" onClick={handleSignIn}>
+              Sign Up
+            </button>
           </div>
         </div>
       </div>
