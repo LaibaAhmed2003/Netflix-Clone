@@ -1,42 +1,117 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+/* Background Image */
+.BgImg {
+  height: 100vh;
+  width: 100vw;
+}
+.BgImg img {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Header */
+.header-container {
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-container .logo img {
+  height: 5rem;
+}
+.header-container button {
+  padding: 0.5rem 1rem;
+  background-color: #e50914;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+.loginbtn {
+  padding: 0.5rem 1rem;
+  background-color: #e50914;
+  border: none;
+  cursor: pointer;
+  color: white;
+  width: 70px;
+  margin-top: 20px;
+}
+
+/* Signup */
+.signup-main-div {
+  position: relative;
+}
+.Signup-Container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 15vh 85vh;
+}
+.Signup-Content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Signup-Content h4,
+h6 {
+  padding: 0 30rem;
+  line-height: 2;
+}
+.Signup-Content h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 0 30rem;
+}
+.Signup-Content h4 {
+  font-size: 1.5rem;
+}
+.Signup-Content h6 {
+  font-size: 1rem;
+  margin-bottom: 9px;
+}
+/* Signup form */
+
+.form {
+  display: grid;
+  width: 60%;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.form input {
+  color: black;
+  /* border: none; */
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  border: 1px solid black;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.form input:focus {
+  outline: none;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.form .btn {
+  padding: 0.5rem 1rem;
+  background-color: #e50914;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 0.2rem;
+  font-weight: bolder;
+  font-size: 1.05rem;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
